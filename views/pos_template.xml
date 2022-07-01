@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="mechanicassets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/muti_pos_mechanic/static/src/css/mechanic.css"/>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/type.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/models.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/orderline.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/payment.js"></script>
+            <!--  script type="text/javascript" src="/muti_pos_mechanic/static/src/js/pos_customer_required.js"></script-->
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/salesreppopup.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/mechanic.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/mechanicpopup.js"></script>
+            <script type="text/javascript" src="/muti_pos_mechanic/static/src/js/MechanicScreen.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

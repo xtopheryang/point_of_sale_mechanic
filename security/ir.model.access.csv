@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+group_pos_mechanic_incentive,group_pos_mechanic_incentive,model_pos_mechanic_incentive,base.group_user,1,1,1,1
+group_pos_mechanic_incentive_lines,group_pos_mechanic_incentive_lines,model_pos_mechanic_incentive_lines,base.group_user,1,1,1,1

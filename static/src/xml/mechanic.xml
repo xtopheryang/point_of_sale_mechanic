@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- t t-name="Orderline" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ul[hasclass('info-list')]/t[1]/li" position="inside">
+            <span class="orderline-mechanic">
+                <i t-on-click="usericonclick" class="oe_link_icon fa fa-user oe_icon line-mechanic-icon oe_green" t-if="props.line.get_mechanic() and props.line.product.type=='service'" role="img"/>
+                <i t-on-click="usericonclick" class="oe_link_icon fa fa-user-plus oe_icon line-mechanic-icon oe_red" t-if="!props.line.get_mechanic() and props.line.product.type=='service'" role="img"/>
+                <t t-esc="props.line.get_mechanic()" t-if="props.line.product.type=='service'"/>
+            </span>
+        </xpath>
+    </t>
+
+    <t t-name="OrderlineSalespersonButton" owl="1">
+        <div class='control-button'>
+            <i class="fa fa-list"/> Mechanic
+        </div>
+    </t-->
+
+	<t t-name="PaymentScreen" t-inherit="point_of_sale.PaymentScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('customer-button')]" position="after"> 
+        	<div class="customer-button">
+            	<div class="button"  t-on-click="usericonclick">
+                	<i class="fa fa-wrench" role="img" aria-label="Customer"
+                    	title="Mechanic" />
+                    <span class="js_customer_name">
+                    	Mechanic
+                    </span>
+               	</div>
+            </div>
+        	<!-- t t-if="env.pos.get_mechanic()">
+	        	<div class="mechanic-button">
+	            	<div class="button" t-on-click="usericonclick">
+						<i class="oe_link_icon fa fa-user oe_icon line-mechanic-icon oe_green" role="img" aria-label="Mechanic"
+							title="Mechanic" />
+						<span class="js_mechanic_name">
+						<t t-if="env.pos.get_mechanic()">
+	                    	<t t-esc="env.pos.get_mechanic().name" />
+	                    </t>
+	                    <t t-if="!env.pos.get_mechanic()">
+							Mechanic
+						</t>
+						</span>
+	 				</div>
+				</div>
+			</t-->
+        </xpath>
+    </t>
+    
+</templates>

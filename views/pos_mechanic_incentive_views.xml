@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="form_pos_mechanic_incentive" model="ir.ui.view">
+		<field name="name">form_pos_mechanic_incentive</field>
+    	<field name="model">pos.mechanic.incentive</field>
+        <field name="arch" type="xml">
+        	<form string="Machinist Incentive Report">
+        		<header>
+        			<button name="generate_report" type="object" string="Generate"/>
+        		</header>
+        		<sheet>
+        			<group>
+        				<group>
+        					<field name="user_id" required="1"/>
+        					<field name="date_from" required="1"/>
+        					<field name="date_to" required="1"/>
+        					<field name="incentive" required="1"/>
+        				</group>
+        			</group>
+        			<separator string="Incentives"/>
+        			<field name="incentive_ids" readonly="1">
+        				<tree>
+        					<field name="date_order"/>
+        					<field name="reference"/>
+        					<field name="service_name"/>
+        					<field name="amount"/>
+        					<field name="commission"/>
+        				</tree>
+        			</field>
+        			<group class="oe_subtotal_footer oe_right" colspan="2">
+        				<field name="total_amount" readonly="1" widget="monetary" force_save="1"/>
+        				<field name="total_commission" readonly="1" widget="monetary" force_save="1"/>
+        			</group>
+        		</sheet>
+        	</form>
+        </field>
+    </record>
+    <record id="tree_pos_mechanic_incentive" model="ir.ui.view">
+		<field name="name">tree_pos_mechanic_incentive</field>
+    	<field name="model">pos.mechanic.incentive</field>
+        <field name="arch" type="xml">
+        	<tree string="Machinist Incentive Report">
+        		<field name="user_id"/>
+        		<field name="date_from"/>
+        		<field name="date_to"/>
+        		<field name="total_amount"/>
+        		<field name="total_commission"/>
+        	</tree>
+        </field>
+    </record>
+    <record id='action_pos_mechanic_incentive' model='ir.actions.act_window'>
+          <field name="name">Machinist Incentive Report</field>
+          <field name="res_model">pos.mechanic.incentive</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                  No Machinist Incentive Reports yet, Let's create one
+              </p><p>
+                  Please call/email our Admin if you have inquiry...
+              </p>
+          </field>          
+          <!-- <field name="domain">[('type','=','C')]</field> -->
+	</record>
+    <menuitem id="menu_mechanic_incentive_report" sequence="5" action="action_pos_mechanic_incentive" name="Machinist Incentive Report" parent="point_of_sale.menu_point_rep"/>
+</odoo>

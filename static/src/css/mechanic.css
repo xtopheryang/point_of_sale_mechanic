@@ -1,0 +1,24 @@
+.mechanic-scroll{
+  height: 270px;
+  overflow: auto;
+}
+
+.mechanic {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mechanic td{
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.mechanic tr:nth-child(even){background-color: #f2f2f2;}
+
+.mechanic tr:hover {background-color: #ddd;}
+
+.orderline-mechanic{
+    padding:0;
+    float:right;
+}
